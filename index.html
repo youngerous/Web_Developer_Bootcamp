@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- action - where the form send data to -->
+	<!-- method - what HTTP methon (GET/POST) -->
+
+	<form action="http://www.wikipedia.org">
+		<label for="username">Email:</label>
+		<input id="username" type="email" name="username" placeholder="email" required>
+
+		<label for="password">Password:</label>
+		<input id="password" type="password" name="password" placeholder="password" required>
+
+		<input type="submit" name="">
+	</form>
+
+
+	<p>Do you prefer cats or dogs?</p>
+
+	<form>
+		<label for="dogs">Dogs:</label>
+		<input id="dogs" type="radio" name="petChoice" value="DOGS">
+
+		<label for="cats">Cats:</label>
+		<input id="cats" type="radio" name="petChoice" value="CATS">
+
+		<p>What's your favorite color?</p>
+		<select name="color">
+			<option value="빨강">Red</option>
+			<option value="주황">Orange</option>
+			<option value="노랑">Yellow</option>
+		</select>
+
+		<textarea name="paragraph" rows="10" cols="10"></textarea>
+
+
+		<button>Go!</button>
+	</form>
+	
+
+</body>
+</html>
+
+
