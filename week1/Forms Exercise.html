@@ -10,39 +10,41 @@
 
 	<form>
 		<label for="firstName">First Name:</label>
-		<input type="text" name="firstName" placeholder="John" required>
+		<input id="firstName" type="text" name="firstName" placeholder="John" required>
 
 		<label for="lastName">Last Name:</label>
-		<input type="text" name="lastName" placeholder="Smith" required>
+		<input id="lastName" type="text" name="lastName" placeholder="Smith" required>
 		
-		<br>
+		<div>
+			<label for="male">Male</label>
+			<input id="male" type="radio" name="ChoiceGender" value="MALE" required>
+			
+			<label for="female">Female</label>
+			<input id="female" type="radio" name="ChoiceGender" value="FEMALE" required>
 
-		<label for="male">Male</label>
-		<input type="radio" name="ChoiceGender" value="MALE" required>
+			<label for="other">Other</label>
+			<input id="other" type="radio" name="ChoiceGender" value="OTHER" required>
+		</div>
+
+		<div>
+			<label for="email">Email:</label>
+			<input id="email" type="email" name="email" placeholder="your email" required>
+
+			<label for="password">Password:</label>
+			<input id="password" type="password" name="password" placeholder="your password" maxlength="10" minlength="5" required>
+		</div>
+
+		<div>
+			<label for="birthday">Birthday:</label>
+			<input id="birthday" type="date" name="birthday" required>
+		</div>
+
+		<div>
+			<label for="agreeConditions">I agree to the terms and conditions</label>
+			<input id="agreeConditions" type="checkbox" name="agree" value="확인" required>
+		</div>
+
 		
-		<label for="Female">Female</label>
-		<input type="radio" name="ChoiceGender" value="FEMALE" required>
-
-		<label for="Other">Other</label>
-		<input type="radio" name="ChoiceGender" value="OTHER" required>
-		
-		<br>
-
-		<label for="email">Email:</label>
-		<input type="email" name="email" placeholder="your email" required>
-
-		<label for="password">Password:</label>
-		<input type="password" name="password" placeholder="your password" maxlength="10" minlength="5" required>
-
-		<br>
-
-		<label for="birthday">Birthday:</label>
-		<input type="date" name="birthday" required>
-
-		<br>
-		<label for="agreeConditions">I agree to the terms and conditions</label>
-		<input type="checkbox" name="agreeConditions" value="확인" required>
-
 		<button>Submit</button>
 	</form>
 
