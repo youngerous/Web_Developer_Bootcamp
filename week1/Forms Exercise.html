@@ -31,7 +31,7 @@
 			<input id="email" type="email" name="email" placeholder="your email" required>
 
 			<label for="password">Password:</label>
-			<input id="password" type="password" name="password" placeholder="your password" maxlength="10" minlength="5" required>
+			<input id="password" type="password" name="password" placeholder="your password" pattern=".{5,10}" required title:"5에서 10글자 이내로 작성하세요">
 		</div>
 
 		<div>
@@ -44,7 +44,7 @@
 			<input id="agreeConditions" type="checkbox" name="agree" value="확인" required>
 		</div>
 
-		
+
 		<button>Submit</button>
 	</form>
 
