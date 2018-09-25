@@ -1,0 +1,33 @@
+body{
+    border: 15px solid lightgrey;
+    width: 70%;
+    max-width: 700px;
+    min-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    font-family: Source Sans Pro;
+}
+
+.date{
+    color: cyan;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+
+.title{
+    font-weight: bold;
+}
+
+
+
+.first{
+    border-left: 6px solid lightgrey;
+    padding-left: 4px;
+}
+
+hr{
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right,rgba(0,0,0,0),rgba(0,0,0,0.75),rgba(0,0,0,0));
+
+}

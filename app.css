@@ -1,5 +1,6 @@
 h1{
 	color: red;
+	font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 li{
@@ -8,4 +9,4 @@ li{
 
 h4{
 	background: rgb(255,100,80);
-} 
+}   
