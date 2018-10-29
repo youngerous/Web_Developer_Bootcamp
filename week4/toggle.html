@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Toggle</title>
+    <style>
+        .purple{
+            background: purple;
+        }
+    </style>
+</head>
+<body>
+    <button>CLICK ME</button>
+
+    <script>
+            var button = document.querySelector("button");
+            // var isPurple = false;
+            // button.addEventListener("click", function(){
+            //    if(!isPurple){
+            //         document.body.style.background = "purple";
+            //         isPurple = true;
+            //    }else{
+            //        document.body.style.background = "black";
+            //        isPurple = false;
+            //    }
+            // });
+
+            /* 유용한 기능: classList.toggle */
+            button.addEventListener("click", function(){
+                document.body.classList.toggle("purple"); // purple class가 있는지 확인
+            });
+
+    </script>
+</body>
+</html>
