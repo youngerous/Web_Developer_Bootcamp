@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery Demo</title>
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+</head>
+<body>
+    <div>Div 1</div>
+    <div class="highlight">Div 2</div>
+    <div id="third">Div 3</div>
+    <div class="highlight">Div 4</div>
+
+    <script>
+        $('div').css('background','purple');
+        $('.highlight').css('width','200px');
+        $('#third').css('border','1px solid orange');
+        $('div').first().css('color','pink');
+        // $('div:first').css('color','pink');
+    </script>
+</body>
+</html>
