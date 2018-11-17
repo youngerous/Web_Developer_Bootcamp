@@ -18,6 +18,23 @@ app.get('/dog', function(req, res){
     res.send("MEOW!")
 });
 
+app.get('/r/:subredditName', function(req, res){
+    var subreddit = req.params.subredditName;
+    res.send('Welcome to a ' + subreddit.toUpperCase() + ' subreddit!');
+});
+
+app.get('/r/:subredditName/comments/:id/:title', function(req, res){
+    var subreddit = req.params.subredditName;
+    var id = req.params.id;
+    var title = req.params.title;
+    res.send('Subreddit: '+subreddit + '\nID: ' + id + '\nTITLE: ' + title);
+});
+
+// This should be in the last position of codes
+app.get("*", function(req, res){
+    res.send('YOU ARE A STAR!!!');
+});
+
 
 
 // Tell Express to listen for requests (start server)
