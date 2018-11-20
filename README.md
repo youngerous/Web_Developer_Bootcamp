@@ -1,4 +1,4 @@
-# Web_study_Likelion
+# The Web Developer Bootcamp UDEMY
 
 1. HTML
 2. CSS
