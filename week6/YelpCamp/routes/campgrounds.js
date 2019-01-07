@@ -27,7 +27,8 @@ router.post('/',middleware.isLoggedIn, function(req, res){
         id: req.user._id,
         username: req.user.username
     }
-    var newCampground = {name: name, image: image, description: description, author: author};
+    var price = req.body.price;
+    var newCampground = {name: name, price:price, image: image, description: description, author: author};
     
     // Create a new campground and save to DB
     Campground.create(newCampground, function(err, newlyCreated){
@@ -75,6 +76,7 @@ router.put('/:id',middleware.checkCampgroundOwnership ,function(req, res){
             res.redirect('/campgrounds');
         }else{
             // redirect somewhere(show page)
+            req.flash('success','Campground updated');
             res.redirect('/campgrounds/' + req.params.id);
         }
     });

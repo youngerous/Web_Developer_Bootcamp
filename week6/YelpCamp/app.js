@@ -2,6 +2,7 @@ var express      = require('express'),
     app          = express(),
     bodyParser   = require('body-parser'),
     mongoose     = require('mongoose'),
+    flash        = require('connect-flash'),
     passport     = require('passport'),
     LocalStrategy= require('passport-local'),
     methodOverride = require('method-override'),
@@ -20,6 +21,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine','ejs');
 app.use(express.static(__dirname + "/public")); 
 app.use(methodOverride('_method'));
+app.use(flash());
 // seedDB(); // 서버를 start할 때마다 실행
  
 // PASSPORT CONFIGURATION
@@ -38,6 +40,8 @@ passport.deserializeUser(User.deserializeUser());
 app.use(function(req, res, next){
     // 모든 route에 currentUser를 저장(어디서든 사용 가능)
     res.locals.currentUser = req.user;
+    res.locals.error = req.flash('error');
+    res.locals.success = req.flash('success');
     next();
 });
 
