@@ -16,7 +16,11 @@ var commentRoutes    = require('./routes/comments'),
     campgroundRoutes = require('./routes/campgrounds'),
     indexRoutes       = require('./routes/index');
 
-mongoose.connect('mongodb://localhost/yelp_camp');
+var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp";
+// terminal에 export DATABASEURL=mongodb://localhost/yelp_camp 입력하면 로컬db 사용가능
+mongoose.connect(url); //heroku 계정에 주소 등록돼있음
+
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine','ejs');
 app.use(express.static(__dirname + "/public")); 
@@ -49,9 +53,10 @@ app.use('/',indexRoutes);
 app.use('/campgrounds/:id/comments',commentRoutes);
 app.use("/campgrounds",campgroundRoutes);
 
-app.listen(3000, function(){
-    console.log('YelpCamp Server has started...');
-});
+app.listen(process.env.PORT, process.env.IP);
+// app.listen(3000, function(){
+//     console.log('YelpCamp Server has started...');
+// });
 
 /*
 Authentication: for login
