@@ -11,4 +11,5 @@
 9. Authentication
 10. Deploy
 
-[Making YELPCAMP site]
+
+
